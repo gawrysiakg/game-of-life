@@ -1,0 +1,30 @@
+@for(row of BOARD; track row; let y=$index){
+<div class="board_row">
+  @for (tile of BOARD[y]; track tile; let x=$index) {
+  <app-tile [tileType]="BOARD[y][x]" (click)="handleTileClick(y, x)">{{
+    BOARD[y][x]
+  }}</app-tile>
+  }
+</div>
+
+}
+<br />
+
+@if (currentOperation === "SET_ALIVE") {
+
+<div class="board_label">
+  <p>Wybierz żywe komórki kliknij Play</p>
+
+  <button (click)="handleOKButton()">Play</button>
+
+  <br />
+</div>
+
+} @if (currentOperation === "PLAY") {
+<div class="board_label">
+  <p>Kliknij Stop by zakończyć</p>
+  <button (click)="handleStopButton()">Stop</button>
+  <br />
+</div>
+
+}
