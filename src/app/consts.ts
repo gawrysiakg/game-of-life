@@ -9,11 +9,6 @@ export enum Operation {
   RESTART = 'RESTART',
 }
 
-export interface BallPosition {
-  x: number;
-  y: number;
-}
-
-export const BOARD = Array.from({ length: 42 }, () => Array(72).fill('0'));
-
-export const MAIN_BOARD = JSON.parse(JSON.stringify(BOARD));
+//  zamieniono na IIFE generującą randomową tablice
+//const BOARD = Array.from({ length: 42 }, () => Array(72).fill(0));
+//export const EXAMPLE_BOARD = JSON.parse(JSON.stringify(BOARD));
