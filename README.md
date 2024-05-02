@@ -26,7 +26,7 @@ Game of Life jest symulacją komórkową, w której każda komórka na planszy m
 
 ## Technologie
 
-Aplikacja Bouncy Ball Game została zbudowana w oparciu o następujące technologie:
+Aplikacja została zbudowana w oparciu o następujące technologie:
 
 - Angular: Framework do budowania interaktywnych aplikacji internetowych [Angular CLI](https://github.com/angular/angular-cli) version 17.0.1
 - TypeScript: Rozszerzenie języka JavaScript, używane do programowania aplikacji w Angularze.
