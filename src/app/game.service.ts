@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Subject, Subscription, interval } from 'rxjs';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -31,11 +31,10 @@ export class GameService {
   })();
 
   public NEW_BOARD: any = Array.from({ length: 42 }, () => Array(72).fill(0));
-
-  private subscription: Subscription | undefined;
+  public intervalId: any = undefined;
   private boardSubject: Subject<any> = new Subject<any>();
   public boardChanged = this.boardSubject.asObservable();
-
+  public speed = 500;
   public getBoard() {
     return this.BOARD;
   }
@@ -96,17 +95,27 @@ export class GameService {
   }
 
   public startGame() {
-    if (!this.subscription) {
-      this.subscription = interval(1000).subscribe(() => {
+    if (!this.intervalId) {
+      this.intervalId = setInterval(() => {
         this.move();
-      });
+      }, this.speed);
     }
   }
 
   public stopGame() {
-    if (this.subscription) {
-      this.subscription.unsubscribe();
-      this.subscription = undefined;
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+      this.intervalId = undefined;
+    }
+  }
+
+  public setSpeed(speed: number) {
+    this.speed = speed;
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+      this.intervalId = setInterval(() => {
+        this.move();
+      }, this.speed);
     }
   }
 }
