@@ -1,6 +1,6 @@
 # Game of Life
 
-Projekt symulujący "Game of Life" zgodnie z zasadami opisanymi na stronie [Wikipedia](https://pl.wikipedia.org/wiki/Gra_w_%C5%BCycie). Projekt został stworzony w oparciu o framework Angular. https://gawrysiakg.github.io/game-of-life/index.html
+Projekt symulujący "Game of Life" zgodnie z zasadami opisanymi na stronie [Wikipedia](https://pl.wikipedia.org/wiki/Gra_w_%C5%BCycie). Projekt został stworzony w oparciu o framework Angular.
 
 ## Online demo:
 
