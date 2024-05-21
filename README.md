@@ -4,7 +4,7 @@ Projekt symulujący "Game of Life" zgodnie z zasadami opisanymi na stronie [Wiki
 
 ## Online demo:
 
-https://gawrysiakg.github.io/game-of-life/
+https://gawrysiakg.github.io/game-of-life/index.html
 
 ## Opis
 
